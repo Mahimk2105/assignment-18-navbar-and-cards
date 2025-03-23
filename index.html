@@ -58,19 +58,40 @@
         .card-content p {
             color: #666;
         }
-        @media (max-width: 600px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-            }
-            nav a {
-                margin: 5px 0;
-            }
-        }
+
+        .navbar {
+           background-color: #ff705a;
+           color: white;
+           padding: 15px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: auto; 
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
     </style>
 </head>
 <body>
     <nav>
+        <div class="menu-icon">☰</div>
         <a href="#">Home</a>
         <a href="#">Recipes</a>
         <a href="#">About</a>
